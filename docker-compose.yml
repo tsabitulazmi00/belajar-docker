@@ -9,10 +9,9 @@ services:
   node:
    image: belajar-node
    container_name: belajar-node
-   ports:
-      -3001:3001
+   networks_mode: host
    volumes: 
       - /root/belajar-docker/coba-node:/root/belajar-docker/coba-node
-expose: 3001:80
+
 volumes:
   tmp:
