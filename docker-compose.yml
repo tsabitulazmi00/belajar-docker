@@ -12,6 +12,6 @@ services:
    ports:
       -3001:3001
    volumes: /root/belajar-docker/coba-node
-
+expose: 3001:80
 volumes:
   tmp:
