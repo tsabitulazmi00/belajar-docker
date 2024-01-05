@@ -4,14 +4,14 @@ services:
     image: belajar-nginx
     container_name: belajar-nginx
     ports:
-      -0.0.0.0:80:80
+      -80:80
 
   node:
    image: belajar-node
    container_name: belajar-node
    ports:
-      -3001
+      -3001:3001
    volumes: /root/belajar-docker/coba-node
-   
+
 volumes:
   tmp:
