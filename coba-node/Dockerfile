@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:latest
 
 RUN apk update && apk add ca-certificates && update-ca-certificates
 
