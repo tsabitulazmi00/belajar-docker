@@ -4,8 +4,7 @@ services:
     image: nginx
     container_name: belajar-nginx
     restart: always
-    network_mode:
-      - host
+    network_mode: host
   node:
    image: belajar-node
    container_name: belajar-node
