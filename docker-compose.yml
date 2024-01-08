@@ -1,7 +1,7 @@
 version: '3'
 services:
   nginx: 
-    image: nginx
+    image: nginx-belajar
     container_name: belajar-nginx
     restart: always
     network_mode: host
