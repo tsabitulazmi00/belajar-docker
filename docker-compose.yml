@@ -1,9 +1,10 @@
+version: '2'
 services:
   nginx: 
     image: nginx
     container_name: belajar-nginx
     restart: always
-    networks_mode:
+    network_mode:
       - host
   node:
    image: belajar-node
