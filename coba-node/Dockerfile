@@ -1,7 +1,11 @@
-FROM node:18.16.0-slim 
+FROM node:14-alpine
+
 WORKDIR /root/belajar-docker/coba-node
-COPY package*.json ./
-COPY . .
+
+COPY package*.json /root/belajar-docker/coba-node
+
 RUN npm install
-EXPOSE 3001
+
+COPY . /root/belajar-docker/coba-node
+
 CMD npm start
