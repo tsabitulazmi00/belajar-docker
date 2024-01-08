@@ -1,6 +1,10 @@
-FROM node:latest
-WORKDIR /root/belajar-docker/coba-node
-COPY . .
-RUN npm install dotenv --save
-RUN npm install
-CMD ["npm", "start"]
+FROM node:alpine
+
+RUN apk update && apk add ca-certificates && update-ca-certificates
+
+RUN mkdir /app
+ADD . /app
+WORKDIR /app
+
+RUN npm update
+CMD npm start
