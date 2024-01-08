@@ -1,10 +1,6 @@
-FROM node:latest
-
-RUN apk update && apk add ca-certificates && update-ca-certificates
-
-RUN mkdir /app
-ADD . /app
-WORKDIR /app
-
-RUN npm update
+FROM node:18.16.0-slim 
+WORKDIR /root/belajar-docker/coba-node
+COPY . .
+RUN npm install
+EXPOSE 3001
 CMD npm start
