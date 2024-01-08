@@ -1,4 +1,4 @@
-FROM  node:18.16.0-slim 
+FROM node
 WORKDIR /root/belajar-docker/coba-node
 COPY . .
 RUN npm install dotenv
