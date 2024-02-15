@@ -4,9 +4,16 @@ const server = http.createServer((req, res) => {
 
     if (req.url === '/') {
         res.write('<h1>Node and Nginx on Docker is Working</h1>');
+	res.write('<a href="/hello/selamatpagi"><button>Selamat Pagi</button></a>');
+	res.write('<a href="/hello"><button>Hello</button></a>');
         res.end();
     } else if (req.url === '/hello') { // Menggunakan 'else if' untuk pengecekan URL
         res.write('<h1>Hello World</h1>');
+	res.write('<a href="/"><button>Back</button></a>');
+        res.end();
+    } else if (req.url === '/hello/selamatpagi') { // Menggunakan 'else if' untuk pengecekan URL
+        res.write('<h1>Hello World Selamat Pagi</h1>');
+	res.write('<a href="/"><button>Back</button></a>');
         res.end();
     } else {
         res.writeHead(404, { 'content-type': 'text/html' }); // Handle jika URL tidak ditemukan
@@ -15,4 +22,4 @@ const server = http.createServer((req, res) => {
     }
 });
 
-server.listen(process.env.PORT || 3000, () => console.log(`server running on ${server.address().port}`));
+server.listen(process.env.PORT || 3006, () => console.log(`server running on ${server.address().port}`));
